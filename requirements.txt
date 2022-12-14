@@ -1,0 +1,4 @@
+ast
+pandas
+torch==1.12.1
+transformers==4.24.0
