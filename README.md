@@ -17,9 +17,10 @@ for specific samples in the Civil Comments-WILDS dataset.
 The remaining files complete various tasks to compute metrics that are useful in evaluating models.  
 These files use the utilites in utils to load the data, load the models, and load the SHAP values.  The data 
 to recreate these experiment can be downloaded at https://drive.google.com/drive/folders/1rcbefukUa0dd3XJNtf_73dTV0uUR_cdv?usp=sharing
+
 The files downloaded from this folder should be placed in a /data folder in the root directory.
 
-###Verify SHAP Sum
+### Verify SHAP Sum
 This file allows you to validate that the sum of the SHAP values for each sample plus the average
 SHAP value for all samples equals the prediction value.  To use this file, update the model filename, 
 
