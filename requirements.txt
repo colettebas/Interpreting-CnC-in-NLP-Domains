@@ -1,5 +1,7 @@
 ast
-pandas
+matplotlib==3.6.2
+pandas--1.5.2
+seaborn==0.12.1
 shap==0.41.0
 torch==1.12.1
 transformers==4.25.1
