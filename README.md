@@ -16,7 +16,7 @@ for specific samples in the Civil Comments-WILDS dataset.
 
 The remaining files complete various tasks to compute metrics that are useful in evaluating models.  
 These files use the utilites in utils to load the data, load the models, and load the SHAP values.  The data 
-to recreate these experiment can be downloaded at https://drive.google.com/drive/folders/1rcbefukUa0dd3XJNtf_73dTV0uUR_cdv?usp=sharing
+to recreate these experiment can be downloaded at https://drive.google.com/drive/folders/1rcbefukUa0dd3XJNtf_73dTV0uUR_cdv?usp=sharing. Store all the data files in the `./data` directory.
 
 The files downloaded from this folder should be placed in a /data folder in the root directory.
 
