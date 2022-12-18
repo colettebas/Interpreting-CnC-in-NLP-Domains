@@ -37,7 +37,7 @@ class SHAPLoader():
             values_list = values_list + tuples
         return values_list
 
-    def convert_shap_files(self, values_file, tokens_file):
+    def convert_shap_files(self, values_file, data_file):
         sample_indices = [5501204,  745527, 6011650, 6028377,  689468, 5836741, 5325575, 5268943,
                           7068476,  395975, 7017781,  374886, 5996752, 5790334,  874205, 5247322,
                           7087935,  551485,  837864, 5225928, 5996362, 6049191, 7010178,  969205,
@@ -74,7 +74,7 @@ class SHAPLoader():
                           264044, 5659300,  486934, 7068576, 6197915, 6008986, 6309507, 5205561,
                           810498,  509950, 5310217, 6221773,  245711, 6081457, 5666897, 5848243,
                           1001118, 5662096,  735476, 7008599, 5082780]
-        tokens = self.decode_tokens(tokens_file)
+        tokens = self.decode_tokens(data_file)
         values = self.decode_shap_values(values_file, sample_indices)
         shap_values = pd.DataFrame(values, columns=['SHAP_not_toxic', 'SHAP_toxic', 'id'])
         shap_values['token'] = tokens
