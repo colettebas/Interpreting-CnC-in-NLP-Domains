@@ -5,6 +5,7 @@ class SHAPLoader():
 
     def __init__(self, input_data_filename: str, input_values_filename: str):
         self.SHAP_values = self.convert_shap_files(input_data_filename, input_values_filename)
+        self.texts_list = self.decode_text(input_data_filename)
 
     def decode_tokens(self, token_array_file):
         with open(token_array_file, 'rb') as f:
@@ -18,6 +19,20 @@ class SHAPLoader():
             array_end_index = tokens[i].index('],')
             tokens[i] = tokens[i][:array_end_index+2:]
             tokens_list = tokens_list + literal_eval(tokens[i])[0]
+        return tokens_list
+    
+    def decode_text(self, token_array_file):
+        with open(token_array_file, 'rb') as f:
+            tokens = f.read()
+        tokens = tokens.decode("ISO-8859-1")
+        tokens = tokens.split('array')
+        tokens.pop(0)
+        tokens_list = []
+        for i in range(len(tokens)):
+            tokens[i] = tokens[i][1::]
+            array_end_index = tokens[i].index('],')
+            tokens[i] = tokens[i][:array_end_index+2:]
+            tokens_list.append(''.join(literal_eval(tokens[i])[0]))
         return tokens_list
 
     def decode_shap_values(self, values_array_file, sample_indices):
