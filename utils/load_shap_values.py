@@ -4,7 +4,7 @@ import pandas as pd
 class SHAPLoader():
 
     def __init__(self, input_data_filename: str, input_values_filename: str):
-        self.SHAP_values = self.convert_shap_files(input_values_filename, input_data_filename)
+        self.SHAP_values = self.convert_shap_files(input_data_filename, input_values_filename)
 
     def decode_tokens(self, token_array_file):
         with open(token_array_file, 'rb') as f:
@@ -37,7 +37,7 @@ class SHAPLoader():
             values_list = values_list + tuples
         return values_list
 
-    def convert_shap_files(self, values_file, data_file):
+    def convert_shap_files(self, data_file, values_file):
         sample_indices = [5501204,  745527, 6011650, 6028377,  689468, 5836741, 5325575, 5268943,
                           7068476,  395975, 7017781,  374886, 5996752, 5790334,  874205, 5247322,
                           7087935,  551485,  837864, 5225928, 5996362, 6049191, 7010178,  969205,
