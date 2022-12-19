@@ -48,7 +48,8 @@ if __name__ == '__main__':
     ax.set_xlabel('SHAP Value')
     ax.set_title('SHAP Value by Model for Sample ' + str(sample_id))
     ax.legend()
-    ax.set_yticks(y_pos, labels=cnc_SHAP_values['token'])
+    ax.set_yticks(y_pos,)
+    ax.set_yticklabels(cnc_SHAP_values['token'])
     ax.invert_yaxis()  # labels read top-to-bottom
 
     fig.tight_layout()
