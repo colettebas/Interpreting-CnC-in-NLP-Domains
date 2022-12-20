@@ -3,17 +3,19 @@ from utils.load_words import WordsLoader
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
 
 if __name__ == '__main__':
     # Fields to update to run an experiment
-    erm_SHAP_input_data_filename = 'data/erm_shap_data.txt'
-    erm_SHAP_input_values_filename = 'data/erm_shap_values.txt'
-    cnc_SHAP_input_data_filename = 'data/cnc_shap_data.txt'
-    cnc_SHAP_input_values_filename = 'data/cnc_shap_values.txt'
+    parent_dir = os.path.abspath(os.getcwd())
+    erm_SHAP_input_data_filename = parent_dir + '/data/erm_shap_data.txt'
+    erm_SHAP_input_values_filename = parent_dir + '/data/erm_shap_values.txt'
+    cnc_SHAP_input_data_filename = parent_dir + '/data/cnc_shap_data.txt'
+    cnc_SHAP_input_values_filename = parent_dir + '/data/cnc_shap_values.txt'
     demography_words_filenames = {
-        'race': 'data/race_words_reddit.csv', 
-        'religion': 'data/religion_words_reddit.csv', 
-        'sexuality': 'data/sexuality_words_reddit.csv'
+        'race': parent_dir + '/data/race_words_reddit.csv',
+        'religion': parent_dir + '/data/religion_words_reddit.csv',
+        'sexuality': parent_dir + '/data/sexuality_words_reddit.csv'
     }
     demography_words = WordsLoader(demography_words_filenames).words
 

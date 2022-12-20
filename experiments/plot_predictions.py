@@ -1,15 +1,17 @@
 from utils.load_shap_values import SHAPLoader
 from utils import load_models as lm
 import matplotlib.pyplot as plt
+import os
 
 if __name__ == '__main__':
-    erm_model = lm.ModelLoader('data/civilcomments_erm_early.pth.tar').pipeline
-    cnc_model = lm.ModelLoader('data/civilcomments_cnc_pretrained.pth.tar').pipeline
+    parent_dir = os.path.abspath(os.getcwd())
+    erm_model = lm.ModelLoader(parent_dir + '/data/civilcomments_erm_early.pth.tar').pipeline
+    cnc_model = lm.ModelLoader(parent_dir + '/data/civilcomments_cnc_pretrained.pth.tar').pipeline
 
-    erm_SHAP_input_data_filename = 'data/erm_shap_data.txt'
-    erm_SHAP_input_values_filename = 'data/erm_shap_values.txt'
-    cnc_SHAP_input_data_filename = 'data/cnc_shap_data.txt'
-    cnc_SHAP_input_values_filename = 'data/cnc_shap_values.txt'
+    erm_SHAP_input_data_filename = parent_dir + '/data/erm_shap_data.txt'
+    erm_SHAP_input_values_filename = parent_dir + '/data/erm_shap_values.txt'
+    cnc_SHAP_input_data_filename = parent_dir + '/data/cnc_shap_data.txt'
+    cnc_SHAP_input_values_filename = parent_dir + '/data/cnc_shap_values.txt'
         
     erm_texts_list = SHAPLoader(erm_SHAP_input_data_filename, erm_SHAP_input_values_filename).texts_list
     cnc_texts_list = SHAPLoader(cnc_SHAP_input_data_filename, cnc_SHAP_input_values_filename).texts_list
