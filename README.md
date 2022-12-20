@@ -17,13 +17,13 @@ The data to recreate these experiment can be downloaded at https://drive.google.
 Store all the data files in the `./data` directory. The dataset is a subset of CivilCommentsWILDS. The models provded are those prodcued by the authors of
 Correct-n-Contrast. New models and data can also be added to this directory.
 
-The `./utilities` directory contains functions load the model pipelines and dataset that are used throughout the repository. 
+The `./utils/` directory contains functions load the model pipelines and dataset that are used throughout the repository. 
 
 The `SHAP_Generation.ipynb` file contains the code needed to save the SHAP values for the randomly
 sampled samples to files for future use.  This process takes abut 16 hours so we provide the files produced
-by this method in the Google Drive. The `./utilities` directory contains a function for loading the SHAP values from these files.
+by this method in the Google Drive. The `./utils/` directory contains a function for loading the SHAP values from these files.
 
-The `./experiments` directory contains all of the files needed to produce the figures used in our paper. 
+The `./experiments/` directory contains all of the files needed to produce the figures used in our paper. 
 To simply user experience, we created a notebook that will automatically run these experiments. 
 Once the data is placed in the correct directory, open the `Intreting_CnC_Visualizations.ipynb` notebook and Run All Cells to view the figures. 
 The experiments in this notebook are labeled with the section they appear in our paper.
