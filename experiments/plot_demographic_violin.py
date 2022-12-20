@@ -1,9 +1,14 @@
-from utils.load_shap_values import SHAPLoader
-from utils.load_words import WordsLoader
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
+
+import sys
+
+# setting path
+sys.path.append('../Interpreting-CnC-in-NLP-Domains')
+from utils.load_shap_values import SHAPLoader
+from utils.load_words import WordsLoader
 
 if __name__ == '__main__':
     # Fields to update to run an experiment

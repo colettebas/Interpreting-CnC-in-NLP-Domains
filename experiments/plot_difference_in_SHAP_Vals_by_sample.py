@@ -1,7 +1,12 @@
-from utils.load_shap_values import SHAPLoader
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
+
+import sys
+
+# setting path
+sys.path.append('../Interpreting-CnC-in-NLP-Domains')
+from utils.load_shap_values import SHAPLoader
 
 if __name__ == '__main__':
     parent_dir = os.path.abspath(os.getcwd())

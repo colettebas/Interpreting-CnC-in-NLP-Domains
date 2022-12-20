@@ -1,8 +1,13 @@
+import shap
+import os
+
+import sys
+
+# setting path
+sys.path.append('../Interpreting-CnC-in-NLP-Domains')
 from utils.load_shap_values import SHAPLoader
 from utils.load_models import ModelLoader
 from utils.load_civilcomments import CivilCommentsLoader
-import shap
-import os
 
 def sum_SHAP_values(SHAP_values, sample_id, toxic=True):
     if toxic:

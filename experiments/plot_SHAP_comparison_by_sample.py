@@ -1,7 +1,12 @@
-from utils.load_shap_values import SHAPLoader
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+
+import sys
+
+# setting path
+sys.path.append('../Interpreting-CnC-in-NLP-Domains')
+from utils.load_shap_values import SHAPLoader
 
 if __name__ == '__main__':
     # Fields to update to run an experiment
