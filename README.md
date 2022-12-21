@@ -13,7 +13,7 @@ To run these experiments on new models, users can simply add their own model che
 
 
 After cloning the repo, make sure that you have installed all of the dependencies using `pip install -r requirements.txt` in the main directory.
-The data to recreate these experiment can be downloaded at https://drive.google.com/drive/folders/1rcbefukUa0dd3XJNtf_73dTV0uUR_cdv?usp=sharing.
+The data to recreate these experiment can be downloaded at https://drive.google.com/drive/folders/1TxfgtpDL5XCSrqoD-bA_FAhXXx8MaHFm?usp=sharing.
 Store all the data files in the `./data` directory. The dataset is a subset of CivilCommentsWILDS. The models provded are those prodcued by the authors of
 Correct-n-Contrast. New models and data can also be added to this directory.
 
